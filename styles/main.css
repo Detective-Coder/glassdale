@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
+
 /*Typography
 --------------------------------------------------------------*/
 body,
@@ -16,6 +17,25 @@ textarea {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.criminal-card-text {
+  border: dotted 1px;
+  padding: 1em;
+  margin: 1em;
+  font-weight: bold;
+  line-height: 1em;
+  width: 20em;
+}
+
+.criminals h2 {
+  text-align: center;
 }
 
 

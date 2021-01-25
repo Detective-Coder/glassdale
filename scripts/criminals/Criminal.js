@@ -3,7 +3,7 @@ export function Criminals(criminalObject){
   <section class="criminal-card">
 
   <div class="criminal-card-text">
-    <p>Name: ${criminalObject.name}</p>
+    <h3>${criminalObject.name}</h3>
     <p>Age: ${criminalObject.age}</p>
     <p>Crime: ${criminalObject.conviction}</p>
     <p>Term start: ${new Date(criminalObject.incarceration.start).toLocaleDateString('en-US')}</p>
