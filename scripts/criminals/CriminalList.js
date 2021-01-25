@@ -15,16 +15,12 @@ function buildCriminalListHTML(criminalCollection){
 
 export const CriminalList = () => {
   getCriminals().then(() => {
-      let criminals = useCriminals();
+      let criminalData = useCriminals();
       // Now that you have the data, what component should be rendered?
-      const finalCriminalHTML = buildCriminalListHTML(criminals);
+      const finalCriminalHTML = buildCriminalListHTML(criminalData);
       criminalContainer.innerHTML = `
     ${finalCriminalHTML}
   `
   })
-
-  
-
-  
 
 }

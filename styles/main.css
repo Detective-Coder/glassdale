@@ -37,5 +37,17 @@ h1,h2,h3,h4,h5,h6 {
 .criminals h2 {
   text-align: center;
 }
+.officer-card-text {
+  border: dotted 1px;
+  padding: 1em;
+  margin: 1em;
+  font-weight: bold;
+  line-height: 1em;
+  width: 20em;
+}
+
+.officers h2 {
+  text-align: center;
+}
 
 
