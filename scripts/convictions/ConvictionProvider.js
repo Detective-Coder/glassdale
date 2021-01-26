@@ -1,4 +1,4 @@
-// The ConvictionProvider component will fetch those crimes and export a useConvictions() method for other components to import.
+
 let convictions = []
 
 // this function will return the info we fetch from the api
@@ -17,6 +17,4 @@ export const getConvictions = () => {
     })
 }
 
-export const useConvictions = () => {
-  return convictions.slice()
-}
+export const useConvictions = () => convictions.slice()
