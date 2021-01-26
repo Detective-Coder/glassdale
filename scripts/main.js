@@ -5,8 +5,8 @@ import {LocationsList} from "./locations/LocationsList.js";
 
 // calling the functions that we imported
 // CriminalList();
-OfficerList();
-LocationsList();
+// OfficerList();
+// LocationsList();
 
 const darkModeButton = document.querySelector("#dark-mode")
 

@@ -22,5 +22,9 @@ export const LocationsList = () => {
     ${finalLocationsHTML}
   `
   })
-
 }
+
+document.querySelector("#facilitiesnav-link").addEventListener("click", () => {
+  // invoke the function that prints the criminals
+  LocationsList();
+})

@@ -22,5 +22,9 @@ export const OfficerList = () => {
     ${finalOfficerHTML}
   `
   })
-
 }
+
+document.querySelector("#officers-nav-link").addEventListener("click", () => {
+  // invoke the function that prints the criminals
+  OfficerList();
+})

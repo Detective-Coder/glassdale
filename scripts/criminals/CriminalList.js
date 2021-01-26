@@ -35,6 +35,7 @@ export const CriminalList = () => {
   })
 }
 
+// select the criminals nav link and add an event listener for a click, onclick run a function
 document.querySelector("#criminals-nav-link").addEventListener("click", () => {
   // invoke the function that prints the criminals
   CriminalList();
