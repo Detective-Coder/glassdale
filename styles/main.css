@@ -61,4 +61,14 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
 }
 
+nav {
+  display: flex;
+}
+
+ul {
+  display: flex;
+  min-width: 40vw;
+  justify-content: space-evenly;
+}
+
 
