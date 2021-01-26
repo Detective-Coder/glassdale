@@ -9,28 +9,22 @@ export const ConvictionSelect = () => {
   getConvictions().then(() => {
      
       const convictions = useConvictions();
-      for (let i = 0; i < convictions.length; i++) {
-        contentTarget.innerHTML = `
-        <select>
-          ${
-            convictions.map(crimeObject => {
-              const crimeName = crimeObject.name 
-              return `<option>${crimeName}</option>`
-            })
-          }
-        </select>
-        `
-      }
+       render(convictions)
   
   })
 }
-// contentTarget.innerHTML = `
-//     <select>
-//         ${
-//             people.map(personObject => {
-//                 const fullName = personObject.name
-//                 return `<option>${fullName}</option>`
-//             })
-//         }
-//     </select>
-// `
+
+function render(convictionsCollection){
+  contentTarget.innerHTML = `
+  <select>
+  <option value="0">Please select a crime...</option>
+    ${
+      convictionsCollection.map(crimeObject => {
+        const crimeName = crimeObject.name 
+        return `<option>${crimeName}</option>`
+      })
+    }
+  </select>
+  `
+
+}
