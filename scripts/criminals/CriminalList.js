@@ -33,5 +33,9 @@ export const CriminalList = () => {
     ${finalCriminalHTML}
   `
   })
-
 }
+
+document.querySelector("#criminals-nav-link").addEventListener("click", () => {
+  // invoke the function that prints the criminals
+  CriminalList();
+})
