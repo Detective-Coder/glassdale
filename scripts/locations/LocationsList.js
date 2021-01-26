@@ -1,7 +1,7 @@
 import { useLocations, getLocations } from "./LocationsProvider.js";
 import { Locations } from "./Locations.js";
 
-let locationsContainer = document.querySelector(".locations-list");
+let locationsContainer = document.querySelector("#main-container");
 
 function buildLocationsListHTML(locationsCollection){
   let locationsHTML = "";
@@ -19,7 +19,7 @@ export const LocationsList = () => {
       // Now that you have the data, what component should be rendered?
       const finalLocationsHTML = buildLocationsListHTML(locationsData);
       locationsContainer.innerHTML = `
-    ${finalLocationsHTML}
+    <h2>Locations</h2><div class="flex-container">${finalLocationsHTML}</div>
   `
   })
 }

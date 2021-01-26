@@ -34,9 +34,6 @@ h1,h2,h3,h4,h5,h6 {
   width: 20em;
 }
 
-.criminals h2 {
-  text-align: center;
-}
 .officer-card-text {
   border: dotted 1px;
   padding: 1em;
@@ -44,10 +41,6 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
   line-height: 1em;
   width: 20em;
-}
-
-.officers h2 {
-  text-align: center;
 }
 
 .locations-card-text {
@@ -59,13 +52,13 @@ h1,h2,h3,h4,h5,h6 {
   width: 20em;
 }
 
-.locations h2 {
-  text-align: center;
-}
-
 .dark-background{
   background-color: #2b362e;
   color: #fafcfb;
+}
+
+#main-container h2 {
+  text-align: center;
 }
 
 

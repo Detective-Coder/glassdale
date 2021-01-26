@@ -3,7 +3,7 @@ import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import { Criminals } from "./Criminal.js";
 
 // getting a reference to the html element where we want to print to, and storing it in a new variable
-let criminalContainer = document.querySelector(".criminal-list");
+let criminalContainer = document.querySelector("#main-container");
 
 // the function we use to build the html up, giving it a parameter where we can pass in an array
 function buildCriminalListHTML(criminalCollection){
@@ -30,7 +30,7 @@ export const CriminalList = () => {
       const finalCriminalHTML = buildCriminalListHTML(criminalData);
       // we're taking that variable that is a reference to the dom element, we're writing to the html, and we're inserting that variable that has all all the html built-up
       criminalContainer.innerHTML = `
-    ${finalCriminalHTML}
+    <h2>Criminals</h2><div class="flex-container">${finalCriminalHTML}</div>
   `
   })
 }

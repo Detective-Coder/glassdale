@@ -1,7 +1,7 @@
 import { useOfficers, getOfficers } from "./OfficerProvider.js";
 import { Officers } from "./Officer.js";
 
-let officerContainer = document.querySelector(".officer-list");
+let officerContainer = document.querySelector("#main-container");
 
 function buildOfficerListHTML(officerCollection){
   let officerHTML = "";
@@ -18,8 +18,8 @@ export const OfficerList = () => {
       let officerData = useOfficers();
       // Now that you have the data, what component should be rendered?
       const finalOfficerHTML = buildOfficerListHTML(officerData);
-      officerContainer.innerHTML = `
-    ${finalOfficerHTML}
+      officerContainer.innerHTML = `<h2>Officers</h2>
+    <div class="flex-container">${finalOfficerHTML}</div>
   `
   })
 }
