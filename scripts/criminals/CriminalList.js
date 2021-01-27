@@ -1,9 +1,8 @@
 // importing the functions that have the info we need to make the CriminalList function
 import { useCriminals, getCriminals } from "./CriminalProvider.js";
-import { Criminals } from "./Criminal.js";
+import { Criminal } from "./Criminal.js";
 
-// getting a reference to the html element where we want to print to, and storing it in a new variable
-let criminalContainer = document.querySelector("#main-container");
+
 
 // the function we use to build the html up, giving it a parameter where we can pass in an array
 function buildCriminalListHTML(criminalCollection){
@@ -20,23 +19,54 @@ function buildCriminalListHTML(criminalCollection){
 }
 
 // exporting and declaring the main function of this module
-export const CriminalList = () => {
-  // we're calling that function that returns the info from the api and THEN more stuff
+export const CriminalList = (convictionFilter) => {
+  let criminalListContainer = document.querySelector("#main-container");
+debugger
+  criminalListContainer.innerHTML = "";
+
   getCriminals().then(() => {
-      // here we're calling that function that has a copy of the criminals array that's now full of data, and we're storing that info in a new variable
-      let criminalData = useCriminals();
-      // Now that you have the data, what component should be rendered?
-      // we're calling the funcation that builds the html, we're passing in the criminalData variable that now has all the array info inside it, and we're storing all that built-up html from all that criminal data and storing it in a new variable
-      const finalCriminalHTML = buildCriminalListHTML(criminalData);
-      // we're taking that variable that is a reference to the dom element, we're writing to the html, and we're inserting that variable that has all all the html built-up
-      criminalContainer.innerHTML = `
-    <h2>Criminals</h2><div class="flex-container">${finalCriminalHTML}</div>
-  `
+    
+      let criminals = useCriminals();
+
+      if(convictionFilter) {
+        debugger
+        criminals = criminalData.filter(currentCriminal => {
+          return currentCriminal.name
+        });
+      }
+   
+      // const finalCriminalHTML = buildCriminalListHTML(criminalData);
+      criminals.forEach((singleCriminal) => {
+        criminalListContainer.innerHTML += Criminal(singleCriminal);
+      });
+      
+  //     criminalListContainer.innerHTML = `
+  //   <h2>Criminals</h2><div class="flex-container">${criminalListContainer}</div>
+  // `
   })
 }
 
-// select the criminals nav link and add an event listener for a click, onclick run a function
 document.querySelector("#criminals-nav-link").addEventListener("click", () => {
-  // invoke the function that prints the criminals
   CriminalList();
 })
+
+// export const CriminalList = (convictionFilter) => {
+//   let criminalListContainer = document.querySelector(".criminal-list");
+
+//   criminalListContainer.innerHTML = ""
+
+//   getCriminals().then(() => {
+//     let criminals = useCriminals();
+
+//     // If we get input from the convictions filter, filter our criminals so that we only see ones with that conviction
+//     if(convictionFilter){
+
+//       criminals = // write your filter here
+
+//     }
+
+//     criminals.forEach((singleCriminal) => {
+//       criminalListContainer.innerHTML += Criminal(singleCriminal);
+//     });
+//   });
+// };
