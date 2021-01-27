@@ -2,26 +2,9 @@
 import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import { Criminal } from "./Criminal.js";
 
-
-
-// the function we use to build the html up, giving it a parameter where we can pass in an array
-function buildCriminalListHTML(criminalCollection){
-  // declaring an empty string that we'll return later in the function
-  let criminalHTML = "";
-
-  // looping through the array that we pass in as an argument
-  for(let i = 0; i < criminalCollection.length; i++){
-    // for each iteration of the array we call our htmlobject function and run it on each index of the the array, and then store it each time in the empty string we made earlier
-    criminalHTML += Criminals(criminalCollection[i]);
-  }
-  // we have to return that array so we can get to the info we put together in this function
-  return criminalHTML;
-}
-
 // exporting and declaring the main function of this module
 export const CriminalList = (convictionFilter) => {
   let criminalListContainer = document.querySelector("#main-container");
-debugger
   criminalListContainer.innerHTML = "";
 
   getCriminals().then(() => {
@@ -29,20 +12,23 @@ debugger
       let criminals = useCriminals();
 
       if(convictionFilter) {
-        debugger
-        criminals = criminalData.filter(currentCriminal => {
-          return currentCriminal.name
+        criminals = useCriminals().filter(currentCriminal => {
+          return currentCriminal.conviction === convictionFilter
         });
+        // let filteredCriminals = []
+
+        // for(let i = 0; i < criminals.length; i++){
+        //   if(criminals[i].conviction === convictionFilter){
+        //     filteredCriminals.push(criminals[i])
+        //   }
+        // }
+
+        // criminlas = filteredCriminals
       }
    
-      // const finalCriminalHTML = buildCriminalListHTML(criminalData);
       criminals.forEach((singleCriminal) => {
         criminalListContainer.innerHTML += Criminal(singleCriminal);
       });
-      
-  //     criminalListContainer.innerHTML = `
-  //   <h2>Criminals</h2><div class="flex-container">${criminalListContainer}</div>
-  // `
   })
 }
 
