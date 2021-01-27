@@ -32,12 +32,11 @@ function render(convictionsCollection){
 // This won't throw an error, but it will fire any time there's a change event anywhere in the main container
 const eventHub = document.querySelector("main")
 eventHub.addEventListener("change", (eventObject) => {
-    // To be more specific, we need to know specifically what we clicked on
-    console.log("Here is the element you clicked on: ", eventObject.target)
+    
 
     if(event.target.id === "crimeSelect"){
-        console.log("You selected something from the crime dropdown")
-        console.log("This is the crime that was selected: ", eventObject.target.value)
+        // console.log("You selected something from the crime dropdown")
+        // console.log("This is the crime that was selected: ", eventObject.target.value)
            // ---------- Your code goes here ----------- //
         /*
         - When we select a crime, we need to filter the criminals in CriminalList.

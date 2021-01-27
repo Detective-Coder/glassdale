@@ -14,3 +14,7 @@ export const getOfficers = () => {
       officers = parsedOfficers
     })
 }
+
+// fetch that data in your OfficerDataProvider component
+
+// export a useOfficers() function 
