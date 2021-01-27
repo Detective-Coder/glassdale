@@ -27,16 +27,19 @@ function render(officerCollection) {
   `
 }
 
-// eventHub.addEventListener("change", changeEvent => {
-//   if (changeEvent.target.id === "officerSelect") {
-//       // Get the name of the selected officer
-//       const selectedOfficer = changeEvent.target.value
+const eventHub = document.querySelector("main");
+eventHub.addEventListener("change", changeEvent => {
+  if (changeEvent.target.id === "officerSelect") {
+      // Get the name of the selected officer
+      const selectedOfficer = changeEvent.target.value
 
-//       // Write your code here
+      // Write your code here
 
-//   }
-// })
+  }
+})
 
 // When the user selects an officer, show the criminals that were arrested by that officer
 
 // the OfficerSelect component can iterate it and render an <option> element for each one
+
+// the criminals fetch contains the arrestingOfficer property
