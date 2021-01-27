@@ -74,6 +74,16 @@ ul {
 #main-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.dropdowns {
+  display: flex;
+  margin-top: 2em;
+}
+
+.filters-crime {
+  margin: 0 5em;
 }
 
 

@@ -1,6 +1,5 @@
 import {useOfficers, getOfficers} from "./OfficerProvider.js";
 import {Officers} from "./Officer.js";
-import { getConvictions } from "../convictions/ConvictionProvider.js";
 
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters-officers")
@@ -37,8 +36,6 @@ function render(officerCollection) {
 
 //   }
 // })
-
-// build a component that renders a <select> element that is populated with all officers in the Glassdale, IL police department
 
 // When the user selects an officer, show the criminals that were arrested by that officer
 
