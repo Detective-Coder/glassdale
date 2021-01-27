@@ -23,7 +23,7 @@ export const CriminalList = (convictionFilter) => {
         //   }
         // }
 
-        // criminlas = filteredCriminals
+        // criminals = filteredCriminals
       }
    
       criminals.forEach((singleCriminal) => {
@@ -36,23 +36,4 @@ document.querySelector("#criminals-nav-link").addEventListener("click", () => {
   CriminalList();
 })
 
-// export const CriminalList = (convictionFilter) => {
-//   let criminalListContainer = document.querySelector(".criminal-list");
 
-//   criminalListContainer.innerHTML = ""
-
-//   getCriminals().then(() => {
-//     let criminals = useCriminals();
-
-//     // If we get input from the convictions filter, filter our criminals so that we only see ones with that conviction
-//     if(convictionFilter){
-
-//       criminals = // write your filter here
-
-//     }
-
-//     criminals.forEach((singleCriminal) => {
-//       criminalListContainer.innerHTML += Criminal(singleCriminal);
-//     });
-//   });
-// };

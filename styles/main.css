@@ -71,4 +71,9 @@ ul {
   justify-content: space-evenly;
 }
 
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 

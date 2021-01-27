@@ -2,7 +2,6 @@
 export function Criminal(criminalObject){
   return `
   <section class="criminal-card">
-
     <div class="criminal-card-text">
       <h3>${criminalObject.name}</h3>
       <p>Age: ${criminalObject.age}</p>
