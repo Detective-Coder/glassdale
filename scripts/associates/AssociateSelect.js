@@ -42,7 +42,7 @@ eventHub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("associates-")) {
       let singleCriminal = criminal.find(x => x.id == eventObject.target.id.split("-")[1])
       console.log(singleCriminal.known_associates);
-      alert(singleCriminal.known_associates);
+      alert(JSON.stringify(singleCriminal.known_associates));
     }
     
   })
