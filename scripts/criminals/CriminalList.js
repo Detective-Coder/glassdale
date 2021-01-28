@@ -3,7 +3,7 @@ import { useCriminals, getCriminals } from "./CriminalProvider.js";
 import { Criminal } from "./Criminal.js";
 
 // exporting and declaring the main function of this module
-export const CriminalList = (convictionFilter) => {
+export const CriminalList = (convictionFilter, officerFilter) => {
   let criminalListContainer = document.querySelector("#main-container");
   criminalListContainer.innerHTML = "";
 
@@ -14,6 +14,20 @@ export const CriminalList = (convictionFilter) => {
       if(convictionFilter) {
         criminals = useCriminals().filter(currentCriminal => {
           return currentCriminal.conviction === convictionFilter
+        });
+        // let filteredCriminals = []
+
+        // for(let i = 0; i < criminals.length; i++){
+        //   if(criminals[i].conviction === convictionFilter){
+        //     filteredCriminals.push(criminals[i])
+        //   }
+        // }
+
+        // criminals = filteredCriminals
+      }
+      if(officerFilter) {
+        criminals = useCriminals().filter(currentCriminal => {
+          return currentCriminal.arrestingOfficer === officerFilter
         });
         // let filteredCriminals = []
 
