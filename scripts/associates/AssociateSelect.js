@@ -42,7 +42,9 @@ eventHub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("associates-")) {
       let singleCriminal = criminal.find(x => x.id == eventObject.target.id.split("-")[1])
       console.log(singleCriminal.known_associates);
+      alert(singleCriminal.known_associates);
     }
+    
   })
 
  
@@ -64,4 +66,8 @@ eventHub.addEventListener("click", (eventObject) => {
   
 })
 
-// When the user clicks the button, you must iterate the array of known_associates for that criminal 
+// When the user clicks the button, you must iterate the array of known_associates for that criminal - CHECK
+// then display the following information. You can display it in a dialog box, as a sidebar, at the top of the screen, or wherever you like.
+
+// The name of the known associate
+// The alibi that the known associate is providing for the criminal to try to prove the criminals' innocence.
