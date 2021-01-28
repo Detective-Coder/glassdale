@@ -52,3 +52,9 @@ document.querySelector("#criminals-nav-link").addEventListener("click", () => {
 })
 
 
+// implement a new button on each criminal representation
+// The button must be labeled "Associate Alibis". 
+//Give each button a unique id by interpolating the id property of the criminal in the value.
+// When the user clicks the button, you must iterate the array of known_associates for that criminal
+
+

@@ -46,18 +46,6 @@ eventHub.addEventListener("change", (eventObject) => {
       //  we call the CriminalList function and pass in the value of the change, which in this case was the name of the crime the user selected
         CriminalList(eventObject.target.value);
     }
-    // if the change happens in the dropdown with the id of officerSelect(the officer filter dropdown), we run CriminalList with...
-    if(eventObject.target.id === "officerSelect"){
-        // console.log("You selected something from the crime dropdown")
-        // console.log("This is the crime that was selected: ", eventObject.target.value)
-           // ---------- Your code goes here ----------- //
-        /*
-        - When we select a crime, we need to filter the criminals in CriminalList.
-        - Start by importing the CriminalList component at the top of this file.
-        - Then call CriminalList, and pass in information about the crime that was chosen
-        */
-      //  ...here CriminalList is being called with 2 parameters, the first would be the convictionFilter, but we don't want to use that here, so we pass in an empty string for that, the seceond parameter is the officerFilter, which we pass in the value of the target of the eventObject, which in this case, the user selects the name of the officer
-        CriminalList("", eventObject.target.value);
-    }
+  
 })
 

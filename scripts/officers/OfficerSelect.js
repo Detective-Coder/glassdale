@@ -1,5 +1,6 @@
 import {useOfficers, getOfficers} from "./OfficerProvider.js";
 import {Officers} from "./Officer.js";
+import { CriminalList } from "../criminals/CriminalList.js";
 
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters-officers")
@@ -34,7 +35,7 @@ eventHub.addEventListener("change", changeEvent => {
       const selectedOfficer = changeEvent.target.value
 
       // Write your code here
-
+    CriminalList("", selectedOfficer)
   }
 })
 
@@ -43,3 +44,4 @@ eventHub.addEventListener("change", changeEvent => {
 // the OfficerSelect component can iterate it and render an <option> element for each one
 
 // the criminals fetch contains the arrestingOfficer property
+

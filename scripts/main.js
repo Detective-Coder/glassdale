@@ -4,6 +4,7 @@ import {OfficerList} from "./officers/OfficerList.js";
 import {LocationsList} from "./locations/LocationsList.js";
 import {ConvictionSelect} from "./convictions/ConvictionSelect.js";
 import {OfficerSelect} from "./officers/OfficerSelect.js";
+import {AssociateSelect} from "./associates/AssociateSelect.js"
 
 // calling the functions that we imported
 // CriminalList();
@@ -11,6 +12,7 @@ import {OfficerSelect} from "./officers/OfficerSelect.js";
 // LocationsList();
 ConvictionSelect();
 OfficerSelect();
+// AssociateSelect();
 
 // dark mode code
 // const darkModeButton = document.querySelector("#dark-mode")
@@ -22,5 +24,7 @@ OfficerSelect();
 //   // Add a class
 //   bodyElement.classList.toggle("dark-background")
 // })
+
+
 
 
