@@ -27,6 +27,7 @@ export const CriminalList = (convictionFilter, officerFilter) => {
       }
       if(officerFilter) {
         criminals = useCriminals().filter(currentCriminal => {
+          // if the name of the officer that the user selects gets passed in through officerFilter, and that name matches the currentCriminal's arrestingOfficer property, then it equals true and that index in the array is returned, if not, the index is skipped over
           return currentCriminal.arrestingOfficer === officerFilter
         });
         // let filteredCriminals = []
