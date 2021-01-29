@@ -110,4 +110,20 @@ nav ul li a {
   max-width: 10vw;
 }
 
+#associates-box {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  /* justify-content: space-evenly; */
+  padding: 2em;
+}
+
+.name-container {
+  margin-left: 3em;
+}
+
+.alibi-container {
+  margin-left: 3em;
+}
+
 
