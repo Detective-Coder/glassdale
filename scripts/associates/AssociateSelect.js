@@ -34,18 +34,30 @@ const eventHub = document.querySelector("main")
 eventHub.addEventListener("click", (eventObject) => {
   getCriminals().then(() => {
     let criminal = useCriminals();
-    let knownAssociatesForCriminal = [];
-    for(let i = 0; i < criminal.length; i++) {
-      knownAssociatesForCriminal += criminal[i].known_associates
-    }
-    console.log(eventObject.target.id.split("-")[1])
+   
+    // console.log(eventObject.target.id.split("-")[1])
     if (eventObject.target.id.includes("associates-")) {
-      let singleCriminal = criminal.find(x => x.id == eventObject.target.id.split("-")[1])
+      let singleCriminal = criminal.find(criminalInLoop => criminalInLoop.id == eventObject.target.id.split("-")[1])
+      let associateName = [];
+      let associateAlibi = [];
+      for(let i = 0; i < singleCriminal.known_associates.length; i++) {
+        
+        associateName += singleCriminal.known_associates[i].name + " "
+        associateAlibi += singleCriminal.known_associates[i].alibi + " "
+       
+        associatesBox.innerHTML = `
+        <div class="name-container">
+          Names: ${associateName}
+        </div> 
+        <div class="alibi-container">
+          Alibis: ${associateAlibi}
+        </div>
+      `;
+      }
+      
+      
      
-      let associateName = singleCriminal.known_associates[0].name
-      let associateAlibi = singleCriminal.known_associates[0].alibi
-     
-      associatesBox.innerHTML = `<div class="name-container">Name: ${associateName}</div> <div class="alibi-container">Alibi: ${associateAlibi}</div>`;
+      
     }
   })
 })
