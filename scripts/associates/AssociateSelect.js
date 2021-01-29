@@ -27,7 +27,7 @@ export const AssociateSelect = () => {
 //   </select>
 //   `
 // }
-
+let associatesBox = document.querySelector("#associates-box");
 // select the main element in the html and store it in eventHub
 const eventHub = document.querySelector("main")
 // listen to main for a changeEvent, which is associated with a dropdown selection, make a parameter called eventObject for this upcoming function
@@ -42,13 +42,28 @@ eventHub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("associates-")) {
       let singleCriminal = criminal.find(x => x.id == eventObject.target.id.split("-")[1])
       console.log(singleCriminal.known_associates);
-      alert(JSON.stringify(singleCriminal.known_associates));
+      console.log(singleCriminal.known_associates[0].name)
+      console.log(singleCriminal.known_associates[0].alibi)
+      let associateName = singleCriminal.known_associates[0].name
+      let associateAlibi = singleCriminal.known_associates[0].alibi
+      console.log(associateName)
+      console.log(associateAlibi)
+      associatesBox.innerHTML = `Name: ${associateName}<br> Alibi: ${associateAlibi}`;
+      // alert(JSON.stringify(singleCriminal.known_associates));
     }
     
   })
 
  
-  
+  // function Associates(associatesObject){
+  //   return `
+  //   <section class="associates-card">
+  //     <div class="associates-card-text">
+  //       <p>Name: ${singleCriminal.known_associates[0].name}</p>
+  //       <p>Alibi: ${singleCriminal.known_associates[0].alibi}</p>
+  //     </div>
+  //   </section>`
+  // }
   
   
     
@@ -71,3 +86,4 @@ eventHub.addEventListener("click", (eventObject) => {
 
 // The name of the known associate
 // The alibi that the known associate is providing for the criminal to try to prove the criminals' innocence.
+
