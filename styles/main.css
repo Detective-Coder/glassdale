@@ -116,6 +116,10 @@ nav ul li a {
   display: flex;
   /* justify-content: space-evenly; */
   padding: 2em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .name-container {
