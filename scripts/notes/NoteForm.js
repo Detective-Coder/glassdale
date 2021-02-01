@@ -1,8 +1,9 @@
-import {saveNote} from "./Note.js"
+import {saveNote} from "./NoteDataProvider.js"
+import {NoteList} from "./NoteList.js"
 
 const contentTarget = document.querySelector(".note-form-container")
 
-const NoteForm = () => {
+export const NoteForm = () => {
     contentTarget.innerHTML = `
         <form class="bg-light p-5 mb-5">
         <div class="mb-3 col-sm-5">
@@ -22,22 +23,32 @@ const NoteForm = () => {
     `
 }
 
+// const noteForm = document.querySelector(".note-form-container")
+// noteForm.innerHTML = NoteForm();
+
+// document.querySelector("#notes-nav-link").addEventListener("click", () => {
+//   NoteForm();
+// })
+
 const eventHub = document.querySelector("main")
 // Handle browser-generated click event in component
 eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveNote") {
 
       // Make a new object representation of a note
-      const newNote = {
+      let newNote = {
           // Key/value pairs here
-          "text": "",
-          "date": "",
-          "suspect": ""
+          "text": document.querySelector("#textarea").value,
+          "date": document.querySelector("#date").value,
+          "suspect": document.querySelector("#suspect").value
       }
+      console.log(newNote)
+      
 
       // Change API state and application state
       saveNote(newNote)
       .then(NoteList) // Refresh your list of notes once you've saved your new one
+      console.log(newNote)
   }
 })
 

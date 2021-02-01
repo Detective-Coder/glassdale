@@ -5,12 +5,14 @@ import {ConvictionSelect} from "./convictions/ConvictionSelect.js";
 import {OfficerSelect} from "./officers/OfficerSelect.js";
 import {} from "./associates/AssociateSelect.js"
 import {} from "./notes/NoteForm.js"
+import {NoteForm} from "./notes/NoteForm.js"
 
 // CriminalList();
 // OfficerList();
 // LocationsList();
 ConvictionSelect();
 OfficerSelect();
+NoteForm();
 // AssociateSelect();
 
 // dark mode code
