@@ -4,15 +4,15 @@ import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js";
 // Get a reference to the DOM element where the <select> will be rendered
 // const contentTarget = document.querySelector(".crime-filter")
 
-export const AssociateSelect = () => {
-  // we're calling that function that returns the info from the api and THEN more stuff
-  getConvictions().then(() => {
+// export const AssociateSelect = () => {
+//   // we're calling that function that returns the info from the api and THEN more stuff
+//   getConvictions().then(() => {
      
-      const convictions = useConvictions();
-       render(convictions)
+//       const convictions = useConvictions();
+//        render(convictions)
   
-  })
-}
+//   })
+// }
 
 // function render(convictionsCollection){
 //   contentTarget.innerHTML = `
@@ -54,13 +54,13 @@ eventHub.addEventListener("click", (eventObject) => {
         </div>
       `;
       }
-      
+    }
+  })
+})      
       
      
       
-    }
-  })
-})
+
 
 
 

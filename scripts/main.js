@@ -1,12 +1,11 @@
-// importing the functions that contain all the final work for printing to the dom
 import {CriminalList} from "./criminals/CriminalList.js";
 import {OfficerList} from "./officers/OfficerList.js";
 import {LocationsList} from "./locations/LocationsList.js";
 import {ConvictionSelect} from "./convictions/ConvictionSelect.js";
 import {OfficerSelect} from "./officers/OfficerSelect.js";
-import {AssociateSelect} from "./associates/AssociateSelect.js"
+import {} from "./associates/AssociateSelect.js"
+import {} from "./notes/NoteForm.js"
 
-// calling the functions that we imported
 // CriminalList();
 // OfficerList();
 // LocationsList();
