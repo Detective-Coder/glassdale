@@ -6,6 +6,7 @@ import {OfficerSelect} from "./officers/OfficerSelect.js";
 import {} from "./associates/AssociateSelect.js"
 import {} from "./notes/NoteForm.js"
 import {NoteForm} from "./notes/NoteForm.js"
+import {NoteList} from "./notes/NoteList.js"
 
 // CriminalList();
 // OfficerList();
@@ -13,6 +14,7 @@ import {NoteForm} from "./notes/NoteForm.js"
 ConvictionSelect();
 OfficerSelect();
 NoteForm();
+NoteList();
 // AssociateSelect();
 
 // dark mode code
