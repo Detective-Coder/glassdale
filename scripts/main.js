@@ -14,6 +14,7 @@ import {NoteList} from "./notes/NoteList.js"
 ConvictionSelect();
 OfficerSelect();
 NoteForm();
+// the function that does all the work for the local api
 NoteList();
 // AssociateSelect();
 

@@ -8,15 +8,15 @@ export const NoteList = () => {
   // setting the innerHTML to an empty string to build up later
   noteListContainer.innerHTML = "";
 
-  // getNotes().then(() => {
-    
+      // get the notes array information and store it in a new notes variable
       let notes = useNotes();
 
+      // for each note, new function with singleNote as a parameter
       notes.forEach((singleNote) => {
+        // for each note, write to the main-container with the results of the Note function - each single note is passed into the function with the singleNote parameter/argument
         noteListContainer.innerHTML += Note(singleNote);
       })
    
-  // })
 }
 
 
