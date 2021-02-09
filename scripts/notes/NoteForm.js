@@ -7,7 +7,7 @@ const contentTarget = document.querySelector(".note-form-container")
 // this function contains the form where we get all the information that we want to save to our .json api
 export const NoteForm = () => {
     contentTarget.innerHTML = `
-        <form class="bg-light p-5 mb-5">
+        <div class="bg-light p-5 mb-5">
         <div class="mb-3 col-sm-5">
           <label for="date" class="form-label">Date</label>
           <input type="date" class="form-control" id="date">
