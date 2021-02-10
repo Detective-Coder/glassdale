@@ -1,11 +1,17 @@
 import {saveNote} from "./NoteDataProvider.js"
 import {NoteList} from "./NoteList.js"
+import {useCriminals, getCriminals} from "../criminals/CriminalProvider.js"
 
 // this is where we're printing the form
 const contentTarget = document.querySelector(".note-form-container")
 
+
+
 // this function contains the form where we get all the information that we want to save to our .json api
 export const NoteForm = () => {
+  getCriminals().then(() => {
+    let criminalsCollection = useCriminals()
+  
     contentTarget.innerHTML = `
         <div class="bg-light p-5 mb-5">
         <div class="mb-3 col-sm-5">
@@ -14,8 +20,15 @@ export const NoteForm = () => {
         </div>
         <div class="mb-3 col-sm-8">
           <label for="suspect" class="form-label">Suspect</label>
-          <input type="text" class="form-control" id="suspect">
-        </div>
+          <select id="noteForm--criminal" class="criminalSelect">
+          ${
+            criminalsCollection.map(criminalObject => {
+              const criminalName = criminalObject.name 
+              const criminalId = criminalObject.id
+              return `<option value="${ criminalId }">${ criminalName }</option>`
+            })
+          } 
+          </select>        </div>
         <div class="mb-3">
           <label for="textarea" class="form-label">Text</label>
           <textarea class="form-control" id="textarea" rows="3"></textarea>
@@ -23,6 +36,7 @@ export const NoteForm = () => {
 
         <button id="saveNote">Save Note</button>
     `
+  })
 }
 
 // getting a reference to the main element
