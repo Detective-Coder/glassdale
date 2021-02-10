@@ -51,7 +51,7 @@ eventHub.addEventListener("click", clickEvent => {
           // Key/value pairs here
           "text": document.querySelector("#textarea").value,
           "date": document.querySelector("#date").value,
-          "suspect": document.querySelector("#suspect").value
+          "criminalId": document.querySelector("#noteForm--criminal").value
       }
       console.log(newNote)
       

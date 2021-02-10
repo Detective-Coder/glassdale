@@ -1,70 +1,34 @@
 {
   "notes": [
     {
-      "text": "",
-      "date": "",
-      "suspect": "",
-      "id": 1
-    },
-    {
-      "text": "",
-      "date": "",
-      "suspect": "",
-      "id": 2
-    },
-    {
-      "text": "",
-      "date": "",
-      "suspect": "",
-      "id": 3
-    },
-    {
-      "text": "test",
-      "date": "test",
-      "suspect": "test",
-      "id": 4
-    },
-    {
-      "text": "test",
-      "date": "test",
-      "suspect": "test",
-      "id": 5
-    },
-    {
-      "text": "she did it",
-      "date": "2021-02-01",
-      "suspect": "Madelyn Lebsack",
-      "id": 6
-    },
-    {
-      "text": "she probably did it",
-      "date": "2021-02-02",
-      "suspect": "Madelyn Lebsack",
-      "id": 7
-    },
-    {
-      "text": "asdfsd",
-      "date": "2021-02-11",
-      "suspect": "Madelyn Lebsack",
-      "id": 8
-    },
-    {
-      "text": "test",
+      "text": "note test",
       "date": "2021-02-10",
-      "suspect": "Madelyn Lebsack",
-      "id": 9
+      "criminalId": "1",
+      "id": 22
     },
     {
-      "text": "more tests",
-      "date": "2021-02-09",
-      "suspect": "Madelyn Lebsack",
-      "id": 10
+      "text": "yet another test",
+      "date": "2021-02-10",
+      "criminalId": "1",
+      "id": 23
     },
     {
-      "text": "another test",
-      "date": "2021-02-09",
-      "suspect": "Madelyn Lebsack",
-      "id": 11
+      "text": "do a note",
+      "date": "2021-02-10",
+      "criminalId": "1",
+      "id": 24
+    },
+    {
+      "text": "running agagi",
+      "date": "2021-02-10",
+      "criminalId": "1",
+      "id": 25
+    },
+    {
+      "text": "recreate",
+      "date": "2021-02-10",
+      "criminalId": "2",
+      "id": 26
     }
   ]
 }

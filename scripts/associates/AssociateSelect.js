@@ -34,7 +34,6 @@ const eventHub = document.querySelector("main")
 eventHub.addEventListener("click", (eventObject) => {
   getCriminals().then(() => {
     let criminal = useCriminals();
-   
     // console.log(eventObject.target.id.split("-")[1])
     if (eventObject.target.id.includes("associates-")) {
       let singleCriminal = criminal.find(criminalInLoop => criminalInLoop.id == eventObject.target.id.split("-")[1])
