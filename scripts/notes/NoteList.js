@@ -21,7 +21,7 @@ export const NoteList = () => {
           return criminal.id === +singleNote.criminalId
         })
         noteListContainer.innerHTML += Note(singleNote, relatedCriminal);
-      })
+      })  
     })
 }
 
