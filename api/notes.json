@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "text": "note test",
-      "date": "2021-02-10",
-      "criminalId": "1",
-      "id": 22
-    },
-    {
       "text": "yet another test",
       "date": "2021-02-10",
       "criminalId": "1",
@@ -29,6 +23,12 @@
       "date": "2021-02-10",
       "criminalId": "2",
       "id": 26
+    },
+    {
+      "text": "it's working pretty good now",
+      "date": "2021-02-11",
+      "criminalId": "6",
+      "id": 27
     }
   ]
 }
