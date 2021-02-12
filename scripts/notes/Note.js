@@ -5,6 +5,7 @@ export function Note(noteObject, criminalObject){
       <p>Text: ${noteObject.text}</p>
       <p>Date: ${noteObject.date}</p>
       <p>Suspect: ${criminalObject.name}</p>
-    </section>
+      <button id="deleteNote--${noteObject.id}">Delete</button>
+  </section>
   `
 }

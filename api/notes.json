@@ -1,30 +1,6 @@
 {
   "notes": [
     {
-      "text": "yet another test",
-      "date": "2021-02-10",
-      "criminalId": "1",
-      "id": 23
-    },
-    {
-      "text": "do a note",
-      "date": "2021-02-10",
-      "criminalId": "1",
-      "id": 24
-    },
-    {
-      "text": "running agagi",
-      "date": "2021-02-10",
-      "criminalId": "1",
-      "id": 25
-    },
-    {
-      "text": "recreate",
-      "date": "2021-02-10",
-      "criminalId": "2",
-      "id": 26
-    },
-    {
       "text": "it's working pretty good now",
       "date": "2021-02-11",
       "criminalId": "6",

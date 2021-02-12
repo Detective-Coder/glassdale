@@ -1,4 +1,4 @@
-import {useNotes, getNotes} from "./NoteDataProvider.js";
+import {useNotes, getNotes, deleteNote} from "./NoteDataProvider.js";
 import {Note} from "./Note.js"
 import {useCriminals, getCriminals} from "../criminals/CriminalProvider.js"
 
@@ -49,6 +49,19 @@ export const NoteList = () => {
 //           render(notes, criminals)
 //       })
 // }
+
+const eventHub = document.querySelector("#main-container")
+
+eventHub.addEventListener("click", (eventObject) => {
+  if (eventObject.target.id.startsWith("deleteNote")) {
+    const idToDelete = eventObject.target.id.split("--")[1]
+    // ---------- Write your code here -------------//
+    // Call the deleteNote function and pass in the appropriate id
+    // Then call NoteList to refresh the list of notes
+    deleteNote(idToDelete)
+    .then(Notelist)
+  }
+});
 
 
 
