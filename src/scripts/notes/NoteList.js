@@ -59,7 +59,7 @@ eventHub.addEventListener("click", (eventObject) => {
     // Call the deleteNote function and pass in the appropriate id
     // Then call NoteList to refresh the list of notes
     deleteNote(idToDelete)
-    .then(Notelist)
+    // .then(Notelist())
   }
 });
 

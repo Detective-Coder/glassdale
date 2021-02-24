@@ -7,7 +7,9 @@ import {} from "./associates/AssociateSelect.js"
 import {} from "./notes/NoteForm.js"
 import {NoteForm} from "./notes/NoteForm.js"
 import {NoteList} from "./notes/NoteList.js"
+import {getCriminals} from "./criminals/CriminalProvider.js"
 
+getCriminals()
 // CriminalList();
 // OfficerList();
 // LocationsList();
